@@ -1,75 +1,68 @@
-# Diabetic Retinopathy Detection
+# Diabetic Retinopathy Classification using MobileNetV2
 
-## 📌 Overview
-Diabetic Retinopathy is a severe eye condition caused by diabetes, leading to vision impairment and blindness if left untreated. This project implements a **Deep Learning-based approach** to detect diabetic retinopathy from retinal fundus images using **Convolutional Neural Networks (CNNs).**
+## Overview
+This project aims to classify diabetic retinopathy severity using deep learning techniques. We utilize the MobileNetV2 architecture for efficient and accurate image classification. The dataset consists of retinal images labeled with different severity levels of diabetic retinopathy.
 
-## 🏗️ Project Structure
-```
-├── dataset/                   # Contains training and testing images
-├── models/                    # Trained model files
-├── src/                       # Source code for training and evaluation
-│   ├── train.py               # Script for training the model
-│   ├── evaluate.py            # Script for evaluating the model
-│   ├── preprocess.py          # Data preprocessing utilities
-├── notebooks/                 # Jupyter notebooks for experimentation
-├── requirements.txt           # List of dependencies
-├── README.md                  # Project documentation
-└── LICENSE                    # License details
-```
+## Features
+- **Deep Learning Model**: Uses MobileNetV2 for efficient feature extraction.
+- **Transfer Learning**: Pretrained weights are fine-tuned on the dataset.
+- **Data Augmentation**: Applied to improve model generalization.
+- **Evaluation Metrics**: Accuracy, Precision, Recall, F1-score, and Kappa Score.
+- **Loss Function**: Sparse Categorical Crossentropy.
+- **Deployment Ready**: Model can be deployed for real-world use cases.
 
-## 🚀 Features
-- **Preprocessing:** Image resizing, augmentation, and normalization.
-- **Deep Learning Model:** CNN-based architecture (ResNet, VGG, or custom model).
-- **Evaluation Metrics:** Accuracy, Precision, Recall, F1-score.
-- **User Interface (Optional):** Streamlit-based web app for predictions.
+## Dataset
+The dataset used in this project is sourced from Kaggle:
+[Diabetic Retinopathy Detection](https://www.kaggle.com/competitions/diabetic-retinopathy-detection)
 
-## 📂 Dataset
-The dataset used in this project is from **Kaggle's APTOS 2019 Blindness Detection** challenge. You can download it from:
-[🔗 Kaggle Dataset](https://www.kaggle.com/c/aptos2019-blindness-detection/data)
+The dataset comprises retinal images categorized into different classes based on diabetic retinopathy severity:
+- No DR
+- Mild DR
+- Moderate DR
+- Severe DR
+- Proliferative DR
 
-## 🛠️ Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/diabetic-retinopathy-detection.git
-   cd diabetic-retinopathy-detection
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Download and place the dataset in the `dataset/` directory.
+A `train.csv` file is used to map image IDs to their respective diagnosis labels.
 
-## 🏋️‍♂️ Training the Model
-Run the training script with:
+Ensure the dataset is structured correctly before training.
+
+## Installation
+Clone the repository and install dependencies:
 ```bash
-python src/train.py --epochs 20 --batch_size 32
+git clone https://github.com/yourusername/diabetic-retinopathy-classification.git
+cd diabetic-retinopathy-classification
+pip install -r requirements.txt
 ```
 
-## 📊 Evaluating the Model
-Run the evaluation script:
+### Dependencies
+Ensure the following Python packages are installed:
 ```bash
-python src/evaluate.py --model models/best_model.pth
+pip install numpy pandas matplotlib seaborn opencv-python tensorflow keras scikit-learn kaggle
 ```
 
-## 🎯 Results
-| Model | Accuracy | Precision | Recall | F1-score |
-|--------|---------|------------|--------|----------|
-| ResNet50 | 92.3% | 89.7% | 91.2% | 90.4% |
-| VGG16 | 89.5% | 86.2% | 88.0% | 87.1% |
-
-## 🌍 Deployment
-To deploy as a web app using **Streamlit**:
+## Running the Code
+The entire workflow is contained in a single Jupyter Notebook. Execute the following command to open the notebook:
 ```bash
-streamlit run app.py
+jupyter notebook Code_Demonstration.ipynb
 ```
 
-## 📜 License
-This project is licensed under the **MIT License**.
+## Evaluation
+The model performance is evaluated using the Kappa Score, along with accuracy, precision, recall, and F1-score. The loss function used is **Sparse Categorical Crossentropy**.
 
-## 🤝 Contributing
-Contributions are welcome! Feel free to **fork** this repository and submit a **pull request**.
+## Results
+The model achieves high classification accuracy with balanced precision and recall. Performance can be further improved with hyperparameter tuning and data augmentation.
 
-## 📞 Contact
-- **Author:** Your Name
-- **Email:** your.email@example.com
-- **GitHub:** [yourusername](https://github.com/yourusername)
+## Future Improvements
+- Enhance dataset with more high-quality images.
+- Experiment with other CNN architectures.
+- Implement model quantization for mobile deployment.
+
+## Contributing
+Feel free to contribute by opening an issue or submitting a pull request.
+
+## License
+This project is licensed under the MIT License.
+
+## Acknowledgments
+Thanks to the open-source community and datasets that made this research possible.
+
