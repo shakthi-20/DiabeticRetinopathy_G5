@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ### Dependencies
 Ensure the following Python packages are installed:
 ```bash
-pip install numpy pandas matplotlib seaborn opencv-python tensorflow keras scikit-learn kaggle
+pip install numpy pandas matplotlib seaborn tensorflow keras opencv-python-headless scikit-learn
 ```
 
 ## Running the Code
