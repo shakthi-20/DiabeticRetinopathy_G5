@@ -30,7 +30,7 @@ Ensure the dataset is structured correctly before training.
 Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/yourusername/DiabeticRetinopathy_G5.git
-cd diabetic-retinopathy-classification
+cd DiabeticRetinopathy_G5
 pip install -r requirements.txt
 ```
 
