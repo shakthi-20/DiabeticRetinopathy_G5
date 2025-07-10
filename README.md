@@ -66,10 +66,4 @@ This project is licensed under the MIT License.
 ## Acknowledgments
 Thanks to the open-source community and datasets that made this research possible.
 
-## Contributors
-Batch No – 05
-- AMAL KRISHNA S CB.EN.U4EEE22003
-- SHAKTHI S CB.EN.U4EEE22044
-- ASHNI S CB.EN.U4EEE22060
-- PRIYASHREE P CB.EN.U4EEE22125
 
